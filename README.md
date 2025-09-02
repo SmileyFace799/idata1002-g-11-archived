@@ -1,0 +1,1 @@
+This is an old school project that was hosted on GitLab before, making it publically inaccessible. This is the final version of that project, but with commit history & some documentation removed, to maintain privacy for the other people involved in this project. The project was developed by me, and 2 other students in a group
