@@ -1,0 +1,4 @@
+economy-management-program/target/*
+.vscode/settings.json
+*.iml
+.idea

@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.SpinnerValueFactory.IntegerSpinnerValueFactory?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@EMP.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="no.ntnu.idatx2001.g11.controllers.MainMenuController">
+   <children>
+      <BorderPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <HBox id="app-top-bar" alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="64.0" BorderPane.alignment="CENTER">
+               <padding>
+                  <Insets left="16.0" right="16.0" />
+               </padding>
+               <children>
+                  <ImageView fitHeight="24.0" fitWidth="24.0" onMouseClicked="#backButtonClicked" pickOnBounds="true" preserveRatio="true" styleClass="light-image">
+                     <image>
+                        <Image url="@Images/iconBack.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets right="16.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label text="Economy Management Program" textFill="WHITE">
+                     <font>
+                        <Font name="Roboto" size="22.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </top>
+         <center>
+            <TabPane focusTraversable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" nodeOrientation="LEFT_TO_RIGHT" side="BOTTOM" tabClosingPolicy="UNAVAILABLE" tabMaxHeight="48.0" tabMinHeight="48.0" tabMinWidth="128.0" BorderPane.alignment="CENTER">
+              <tabs>
+                <Tab>
+                  <content>
+                    <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+                           <children>
+                              <ScrollPane fx:id="purchaseListScreen" fitToWidth="true" hbarPolicy="NEVER" layoutX="44.0" layoutY="16.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" AnchorPane.bottomAnchor="56.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <content>
+                                    <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+                                       <children>
+                                          <VBox fx:id="transactionList" maxHeight="1.7976931348623157E308" prefWidth="358.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <HBox fx:id="transactionListHeader" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" prefHeight="24.0" VBox.vgrow="NEVER">
+                                                   <children>
+                                                      <Label maxHeight="1.7976931348623157E308" maxWidth="128.0" minWidth="128.0" prefWidth="128.0" text="Price" HBox.hgrow="SOMETIMES" />
+                                                      <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Product" HBox.hgrow="ALWAYS" />
+                                                      <Label maxHeight="1.7976931348623157E308" maxWidth="84.0" minWidth="84.0" prefWidth="84.0" text="Date" HBox.hgrow="SOMETIMES" />
+                                                      <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="64.0" minWidth="64.0" prefWidth="64.0" text="Delete" textAlignment="CENTER" />
+                                                   </children>
+                                                   <styleClass>
+                                                      <String fx:value="table-header" />
+                                                      <String fx:value="table-item" />
+                                                   </styleClass>
+                                                </HBox>
+                                                <HBox maxHeight="-Infinity" maxWidth="1.7976931348623157E308" prefHeight="38.0" styleClass="table-item">
+                                                   <children>
+                                                      <Label maxHeight="1.7976931348623157E308" maxWidth="128.0" minWidth="128.0" prefWidth="128.0" styleClass="table-price" text="30.90 kr" HBox.hgrow="SOMETIMES" />
+                                                      <VBox HBox.hgrow="ALWAYS">
+                                                         <children>
+                                                            <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="table-product" text="Chocolate" VBox.vgrow="ALWAYS" />
+                                                            <Label maxWidth="1.7976931348623157E308" styleClass="table-category" text="Food" />
+                                                         </children>
+                                                      </VBox>
+                                                      <Label maxHeight="1.7976931348623157E308" maxWidth="84.0" minWidth="84.0" prefWidth="84.0" styleClass="table-date" text="12/02/23" HBox.hgrow="SOMETIMES" />
+                                                      <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                                         <HBox.margin>
+                                                            <Insets left="21.0" right="21.0" top="10.0" />
+                                                         </HBox.margin>
+                                                         <image>
+                                                            <Image url="@Images/iconDelete.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </ScrollPane>
+                              <AnchorPane fx:id="purchaseCreateScreen" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <VBox spacing="8.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <AnchorPane>
+                                             <children>
+                                                <TextField fx:id="createTransactionProductName" prefHeight="32.0" promptText="Product name (Chocolate)" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                </TextField>
+                                                <ImageView fitHeight="20.0" fitWidth="20.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="6.0" AnchorPane.leftAnchor="16.0" AnchorPane.topAnchor="6.0">
+                                                   <image>
+                                                      <Image url="@Images/iconSell.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </children>
+                                          </AnchorPane>
+                                          <HBox spacing="8.0">
+                                             <children>
+                                                <AnchorPane HBox.hgrow="ALWAYS">
+                                                   <children>
+                                                      <TextField fx:id="createTransactionProductPrice" prefHeight="32.0" promptText="Price (30.90)" styleClass="price-field" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <opaqueInsets>
+                                                            <Insets />
+                                                         </opaqueInsets>
+                                                      </TextField>
+                                                      <ImageView fitHeight="20.0" fitWidth="20.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="6.0" AnchorPane.leftAnchor="16.0" AnchorPane.topAnchor="6.0">
+                                                         <image>
+                                                            <Image url="@Images/iconPayment.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </children>
+                                                </AnchorPane>
+                                                <CheckBox fx:id="createTransactionIncomeCheckbox" maxHeight="1.7976931348623157E308" mnemonicParsing="false" text="Income">
+                                                   <HBox.margin>
+                                                      <Insets right="8.0" />
+                                                   </HBox.margin>
+                                                </CheckBox>
+                                             </children>
+                                          </HBox>
+                                          <AnchorPane>
+                                             <children>
+                                                <DatePicker fx:id="createTransactionProductTime" prefHeight="32.0" promptText="Date (13/1/2023)" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                                <ImageView fitHeight="20.0" fitWidth="20.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="6.0" AnchorPane.leftAnchor="16.0" AnchorPane.topAnchor="6.0">
+                                                   <image>
+                                                      <Image url="@Images/iconDate.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </children>
+                                          </AnchorPane>
+                                          <HBox alignment="CENTER_LEFT" VBox.vgrow="NEVER">
+                                             <children>
+                                                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                                   <HBox.margin>
+                                                      <Insets bottom="6.0" left="16.0" right="20.0" top="6.0" />
+                                                   </HBox.margin>
+                                                   <image>
+                                                      <Image url="@Images/iconRecurring.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <CheckBox fx:id="createTransactionIsRecurring" disable="true" mnemonicParsing="false" onAction="#toggleRecurring" text="Recurring every " />
+                                                <Spinner fx:id="createTransactionRecurringInterval" disable="true" editable="true" maxHeight="1.7976931348623157E308" maxWidth="82.0" minWidth="48.0" nodeOrientation="LEFT_TO_RIGHT" prefWidth="48.0" HBox.hgrow="ALWAYS">
+                                                   <HBox.margin>
+                                                      <Insets bottom="4.0" right="8.0" top="4.0" />
+                                                   </HBox.margin>
+                                                   <valueFactory>
+                                                      <SpinnerValueFactory.IntegerSpinnerValueFactory amountToStepBy="1" initialValue="1" max="365" min="1" />
+                                                   </valueFactory>
+                                                </Spinner>
+                                                <ComboBox fx:id="createTransactionRecurringType" disable="true" maxWidth="1.7976931348623157E308" prefWidth="150.0" promptText="Interval" HBox.hgrow="ALWAYS" />
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets />
+                                             </VBox.margin>
+                                          </HBox>
+                                          <VBox spacing="10.0">
+                                             <children>
+                                                <HBox alignment="CENTER_LEFT" spacing="24.0">
+                                                   <VBox.margin>
+                                                      <Insets />
+                                                   </VBox.margin>
+                                                   <children>
+                                                      <Button fx:id="quickSelect1" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onQuickSelect1" styleClass="button-unemphasized" text="Food" textOverrun="CLIP" HBox.hgrow="ALWAYS">
+                                                         <opaqueInsets>
+                                                            <Insets />
+                                                         </opaqueInsets>
+                                                         <graphic>
+                                                            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@Images/iconFood.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </graphic>
+                                                      </Button>
+                                                      <Button fx:id="quickSelect2" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onQuickSelect2" styleClass="button-unemphasized" text="Fuel" textOverrun="CLIP" HBox.hgrow="ALWAYS">
+                                                         <opaqueInsets>
+                                                            <Insets />
+                                                         </opaqueInsets>
+                                                         <graphic>
+                                                            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@Images/iconGas.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </graphic>
+                                                      </Button>
+                                                      <Button fx:id="quickSelect3" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onQuickSelect3" styleClass="button-unemphasized" text="Utility" textOverrun="CLIP" HBox.hgrow="ALWAYS">
+                                                         <opaqueInsets>
+                                                            <Insets />
+                                                         </opaqueInsets>
+                                                         <graphic>
+                                                            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@Images/iconUtility.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </graphic>
+                                                      </Button>
+                                                      <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#submitNewTransaction" text="Submit" textOverrun="CLIP" HBox.hgrow="ALWAYS">
+                                                         <opaqueInsets>
+                                                            <Insets />
+                                                         </opaqueInsets>
+                                                         <graphic>
+                                                            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" styleClass="light-image">
+                                                               <image>
+                                                                  <Image url="@Images/iconDone.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </graphic>
+                                                      </Button>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" spacing="24.0">
+                                                   <VBox.margin>
+                                                      <Insets right="64.0" />
+                                                   </VBox.margin>
+                                                   <children>
+                                                      <Button fx:id="quickSelect4" maxWidth="1.7976931348623157E308" minWidth="108.0" mnemonicParsing="false" onAction="#onQuickSelect4" styleClass="button-unemphasized" text="Other" textOverrun="CLIP">
+                                                         <opaqueInsets>
+                                                            <Insets />
+                                                         </opaqueInsets>
+                                                         <graphic>
+                                                            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@Images/iconAdditionalCategories.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </graphic>
+                                                      </Button>
+                                                      <ComboBox fx:id="additionalCategorySelection" disable="true" maxWidth="1.7976931348623157E308" prefWidth="150.0" promptText="Additional categories" HBox.hgrow="ALWAYS" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets />
+                                             </VBox.margin>
+                                          </VBox>
+                                          <Label fx:id="productRegisterErrorLabel" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="error-text" wrapText="true" VBox.vgrow="ALWAYS">
+                                             <VBox.margin>
+                                                <Insets right="64.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                              <Button fx:id="createPurchaseButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onCreatePurchaseButton" prefHeight="48.0" prefWidth="48.0" styleClass="floating-button" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                 <graphic>
+                                    <ImageView fx:id="createPurchaseButtonImage" fitHeight="24.0" fitWidth="24.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true" styleClass="light-image">
+                                       <image>
+                                          <Image url="@Images/iconAdd.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                           <padding>
+                              <Insets bottom="16.0" left="44.0" right="44.0" top="16.0" />
+                           </padding>
+                        </AnchorPane>
+                  </content>
+                     <graphic>
+                        <VBox alignment="CENTER" fillWidth="false">
+                           <children>
+                              <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" styleClass="light-image" VBox.vgrow="ALWAYS">
+                                 <image>
+                                    <Image url="@Images/iconPayment.png" />
+                                 </image>
+                              </ImageView>
+                              <Label maxWidth="1.7976931348623157E308" text="Purchases" />
+                           </children>
+                        </VBox>
+                     </graphic>
+                </Tab>
+                  <Tab onSelectionChanged="#graphTabSelected">
+                     <graphic>
+                        <VBox alignment="CENTER">
+                           <children>
+                              <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" styleClass="light-image" VBox.vgrow="ALWAYS">
+                                 <image>
+                                    <Image url="@Images/iconGraph.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="Graphs" />
+                           </children>
+                        </VBox>
+                     </graphic>
+                     <content>
+                        <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+                           <content>
+                              <VBox>
+                                 <children>
+                                    <LineChart fx:id="graphItem" VBox.vgrow="NEVER">
+                                      <xAxis>
+                                        <CategoryAxis side="BOTTOM" />
+                                      </xAxis>
+                                      <yAxis>
+                                        <NumberAxis lowerBound="-75.0" minorTickCount="2" side="LEFT" upperBound="75.0" />
+                                      </yAxis>
+                                    </LineChart>
+                                    <HBox prefHeight="100.0" prefWidth="200.0" visible="false">
+                                       <children>
+                                          <Label text="Status: " HBox.hgrow="SOMETIMES" />
+                                          <Label text="Disastrous" />
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets left="48.0" right="48.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </content>
+                           <padding>
+                              <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+                           </padding>
+                        </ScrollPane>
+                     </content>
+                  </Tab>
+                  <Tab disable="true">
+                     <content>
+                        <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" />
+                     </content>
+                     <graphic>
+                        <VBox alignment="CENTER">
+                           <children>
+                              <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" styleClass="light-image" VBox.vgrow="ALWAYS">
+                                 <image>
+                                    <Image url="@Images/iconSettings.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="Settings" />
+                           </children>
+                        </VBox>
+                     </graphic>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

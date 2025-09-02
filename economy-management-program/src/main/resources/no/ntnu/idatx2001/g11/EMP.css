@@ -1,0 +1,192 @@
+/*
+--text-color-light: #ffffff;
+--foreground-regular: #512CA8;
+--foreground-light: #8558DA;
+--foreground-dark: #140078;
+*/
+
+
+
+#app-top-bar {
+    -fx-background-color: #512CA8;
+    -fx-fill: #ffffff;
+}
+
+#app-top-bar {
+    -fx-fill: #ffffff;
+}
+
+#app-nav {
+    -fx-background-color: #8558DA;
+}
+
+.light-image {
+    -fx-effect: innershadow(one-pass-box, #ffffff, 127, 127, 0, 0);
+}
+
+.card-image-container {
+    -fx-background-color: #8558DA;
+    -fx-text-fill: #ffffff;
+}
+
+.card-container.disabled-container .card-image-container {
+    -fx-background-color: #512CA8 !important;
+}
+
+.card-container.disabled-container .card-name-label {
+    -fx-opacity: 1;
+}
+
+.card-container.disabled-container .light-image {
+    -fx-opacity: 0.5;
+}
+
+.card-name-container {
+    -fx-background-color: #512CA8;
+    -fx-text-fill: #ffffff;
+}
+
+.card-name-label {
+    -fx-text-fill: inherit;
+}
+
+.button, .floating-button {
+    -fx-background-color: #512CA8;
+    -fx-text-fill: #ffffff;
+    -fx-border-radius: 1080px;
+    -fx-background-radius: 1080px;
+}
+
+.button-unemphasized {
+    -fx-background-color: transparent;
+    -fx-border-width: 1px;
+    -fx-border-color: #000000;
+    -fx-text-fill: #000000;
+}
+
+.button:hover {
+    -fx-background-color: #140078;
+    -fx-fill-color: #ffffff;
+    /* -fx-effect: dropshadow(gaussian, #000000, 5px, 0px, 0, 5px) */
+}
+
+.button-unemphasized:hover {
+    -fx-background-color: rgba(0,0,0,0.06);
+}
+
+.button-unemphasized.selected{
+    -fx-background-color: rgba(133, 88, 218,1);
+    -fx-text-fill: #ffffff;
+    -fx-border-color: transparent;
+}
+.button-unemphasized.selected .image-view {
+    -fx-effect: innershadow(one-pass-box, #ffffff, 127, 127, 0, 0);
+}
+
+.text-field{
+    -fx-prompt-text-fill: rgba(0,0,0,0.7);
+    -fx-background-color: rgba(0,0,0,0.05);
+    -fx-border-width: 0px 0px 1px 0px;
+    -fx-border-color: rgba(0,0,0,0.5);
+    -fx-padding: 0 16px 0 56px;
+}
+
+.date-picker {
+    -fx-prompt-text-fill: rgba(0,0,0,0.7);
+    -fx-background-color: transparent;
+}
+
+.date-picker .arrow-button {
+    -fx-background-color: #512CA8;
+}
+.date-picker .arrow-button .arrow {
+    -fx-background-color: #ffffff;
+}
+
+.check-box .box{
+    -fx-background-color: transparent;
+    -fx-border-width: 1px;
+    -fx-border-color: #000000;
+    -fx-border-radius: 5px;
+}
+.check-box:selected .box{
+    -fx-background-color: #512CA8;
+    -fx-background-radius: 5px;
+    -fx-border-color: #512CA8;
+}
+.check-box:selected .box .mark{
+    -fx-background-color: #ffffff;
+}
+
+.spinner {
+    -fx-background-color: transparent;
+}
+
+.spinner .text-field {
+    -fx-padding: 0 8px;
+    -fx-text-fill: #000000 !important;
+}
+
+.spinner .increment-arrow-button, .spinner .decrement-arrow-button {
+    -fx-background-color: rgba(0,0,0,0.05);
+}
+.spinner .increment-arrow-button .increment-arrow, .spinner .decrement-arrow-button .decrement-arrow{
+    -fx-background-color: rgba(0,0,0,0.5);
+}
+
+.spinner .decrement-arrow-button {
+    -fx-border-width: 0px 0px 1px 0px;
+    -fx-border-color: rgba(0,0,0,0.5)
+}
+
+.combo-box {
+    -fx-background-color: rgba(0,0,0,0.05);
+}
+
+/* Tab bar stuff */
+.tab-header-background {
+    -fx-background-color: #8558DA;
+}
+
+.tab{
+    -fx-background-color: transparent;
+}
+
+.tab .text {
+    -fx-fill: #ffffff;
+}
+
+.tab:focus {
+    -fx-border: none;
+}
+
+.tab:selected {
+    -fx-border-width: 0px 0px 5px 0px;
+    -fx-border-color: #ffffff;
+}
+
+* {
+    -fx-background: #ffffff;
+}
+
+.table-item {
+    -fx-border-width: 0px 0px 1px 0px;
+    -fx-border-color: #cccccc;
+}
+
+.table-price, .table-product, .table-date {
+    -fx-font-size: 18px;
+}
+
+.table-category {
+    -fx-font-size: 12px;
+    -fx-text-fill: rgba(0,0,0,0.7)
+}
+
+.scroll-pane {
+    -fx-background-color: none;
+}
+
+.error-text {
+    -fx-text-fill: #B3261E;
+}
